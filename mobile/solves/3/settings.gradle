@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "khai_mobile_lab"
