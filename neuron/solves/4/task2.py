@@ -1,5 +1,3 @@
-
-
 """ Task2
 Create classes for Student, BudgetStudent, ContractStudent, Group, Discipline, Tutor
 """
@@ -19,12 +17,14 @@ class Student:
         self.birthYear = birthYear
         self.startYear = startYear
 
+
 class BudgetStudent(Student):
     grant = 0
 
     def __init__(self, firstName, middleName, lastName, birthYear, startYear, grant):
         super().__init__(firstName, middleName, lastName, birthYear, startYear)
         self.grant = grant
+
 
 class ContractStudent(Student):
     monthly_payment = 0
@@ -33,6 +33,7 @@ class ContractStudent(Student):
         super().__init__(firstName, middleName, lastName, birthYear, startYear)
         self.monthly_payment = monthly_payment
 
+
 class Group:
     group_number = ''
     students = []
@@ -40,6 +41,7 @@ class Group:
     def __init__(self, group_number, students):
         self.group_number = group_number
         self.students = students
+
 
 class Discipline:
     name = ''
@@ -50,6 +52,7 @@ class Discipline:
         self.credit_amount = credit_amount
         self.name = name
         self.semester = semester
+
 
 class Tutor:
     firstName = ''
@@ -66,7 +69,7 @@ class Tutor:
         self.birthYear = birthYear
         self.yearsWorking = yearsWorking
         self.disciplines = disciplines
-    
+
     def TotalSubject(self):
         disciplines_count = len(self.disciplines)
         total_credits = 0

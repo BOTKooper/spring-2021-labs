@@ -1,15 +1,12 @@
-import math
+""" Task 2
+Multiply first Z elements of arithmetic progression with given a(1), t (diff) and Z (amount of elements)
+"""
 
 # DEFAULTS FOR VARIANT 13
 DEF_A1 = 7
 DEF_T = 2
 DEF_Z = 4
 
-
-
-""" Task 2
-Multiply first Z elements of arithmetic progression with given a(1), t (diff) and Z (amount of elements)
-"""
 
 def solve(a1, t, z):
     mul = a1
@@ -32,5 +29,3 @@ elif flag == 'c':
     print(solve(A1, T, Z))
 else:
     raise ValueError('Invalid choice')
-
-

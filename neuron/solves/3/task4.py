@@ -1,5 +1,3 @@
-import math
-
 """ Task 4
 Check if given array of N+5 elements is corted in given order (0=acs, 1=desc)
 """

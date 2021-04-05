@@ -1,4 +1,3 @@
-import math
 import datetime
 
 N = 13.0
@@ -26,7 +25,6 @@ class Ticket:
     is_student = False
     event_date = datetime.date.today()
 
-
     """
     0=ordinary
     1=student
@@ -34,7 +32,7 @@ class Ticket:
     3=late
     """
     ticket_type = 0
-    
+
     def __init__(self, id, is_student, sell_date, event_date):
         self.id = id
         self.is_student = is_student
@@ -52,8 +50,9 @@ class Ticket:
         id_str = "id: " + str(self.id) + "\n"
         price_str = "Price: " + str(self.price) + "\n"
         sell_date_str = "Sell Date: " + str(self.sell_date) + "\n"
-        types_str = "Ticket Type: " + types.get(self.ticket_type, 'Unknown') + "\n"
-        return  id_str + price_str + sell_date_str + types_str
+        types_str = "Ticket Type: " + \
+            types.get(self.ticket_type, 'Unknown') + "\n"
+        return id_str + price_str + sell_date_str + types_str
 
     def calculate_price(self):
         if self.is_student == True:
@@ -83,11 +82,11 @@ class CommandOPalette:
     def createTicket(self, event_date):
         sell_date = getDatetimeFromInput('sell date')
         is_student_ans = input('Is student? (y/N): ')
-        
+
         is_student = False
         if is_student_ans.lower() == 'y':
             is_student = True
-        
+
         ticket = Ticket(len(self.TICKET_DB), is_student, sell_date, event_date)
         self.TICKET_DB.append(ticket)
         return ticket
@@ -127,7 +126,7 @@ class CommandOPalette:
             self.show_help()
         else:
             print('Invalid command')
-            
+
     def show_help(self):
         print('0 - this help')
         print('1 - Prints all tickets')
@@ -136,7 +135,8 @@ class CommandOPalette:
 
 
 def getDatetimeFromInput(date_of_what):
-    date_entry = input('Enter date of the ' + date_of_what + ' in YYYY/MM/DD format: ')
+    date_entry = input('Enter date of the ' +
+                       date_of_what + ' in YYYY/MM/DD format: ')
     year, month, day = map(int, date_entry.split('/'))
     date = datetime.date(year, month, day)
     return date

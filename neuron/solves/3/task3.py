@@ -1,17 +1,13 @@
-
-import math
+""" Task 3
+Calculate sum of elements in geometrical progression which are greaten than given value.
+Values given: a(1), t, alim
+"""
 
 # DEFAULTS FOR VARIANT 13
 DEF_A1 = 70.0
 DEF_ALIM = 2.0
 DEF_T = 0.4
 
-
-
-""" Task 3
-Calculate sum of elements in geometrical progression which are greaten than given value.
-Values given: a(1), t, alim
-"""
 
 def solve(a1, t, alim):
     if t >= 1:

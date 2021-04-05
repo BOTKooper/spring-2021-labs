@@ -1,6 +1,3 @@
-import math
-
-
 """ Task 1
 Calculate amount of positive bits of the given N (convert from decimal to binary on the first place)
 """

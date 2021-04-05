@@ -1,8 +1,6 @@
-import math
-
 """ Task 5
 Check if given array of N+5 elements is corted in given order (0=acs, 1=desc)
-then mutate each array element to be equal iteself+index
+then mutate each array element to be equal itself+index
 """
 
 
@@ -15,6 +13,7 @@ def is_sorted(arr, order):
             if arr[i] < arr[i + 1]:
                 return False
     return True
+
 
 def solve(arr, order):
     sorted = is_sorted(arr, order)
