@@ -73,7 +73,7 @@ class Ticket:
         return self.price
 
 
-class CommandOPalette:
+class CommandPalette:
     TICKET_DB = []
 
     def __init__(self):
@@ -142,7 +142,7 @@ def getDatetimeFromInput(date_of_what):
     return date
 
 
-PALETTE = CommandOPalette()
+PALETTE = CommandPalette()
 EVENT_DATE = getDatetimeFromInput('event')
 
 while True:
