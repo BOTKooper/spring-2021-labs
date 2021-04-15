@@ -1,10 +1,3 @@
-""" #TODO
-
-- [ ] Add getters and setters for the field at classes
-- [ ] Add getters for classes
-- [ ] Add _str_ to entities
-
-"""
 
 """ Task2
 Create classes for Student, BudgetStudent, ContractStudent, Group, Discipline, Tutor
